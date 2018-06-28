@@ -3,28 +3,73 @@
     <div class="col-sm-10 col-sm-offset-1">
 
       <div class="cocktail-info">
+      <h1><%= @cocktail.name %></h1>
+      <hr class="divider">
 
-        <h1><%= @cocktail.name %></h1>
-        <hr class="divider">
-        <span class="cocktail-title">Ingredients</span>
-            <div class="dose">
-              <ul class="dose-details" style="list-style: none">
-                  <% @doses.each do |dose| %>
-                    <li>
-                      <p>
-                        <%= dose.description %> - <%= dose.ingredient.name %> - <%= link_to "Delete Ingredient", dose_path(dose), method: :delete %>
-                      </p>
-                    </li>
-                  <% end %>
-              </ul>
+        <div class="row">
+          <div class="col-sm-6">
+
+            <div class="dose-title">
+              <span>Ingredients</span>
             </div>
 
-            <br>
-            <p><%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-danger" %></p>
+            <div class="dose-list">
+              <% @doses.each do |dose| %>
+                <p>
+                  <strong><%= dose.description %></strong>
+                  <%= dose.ingredient.name %>
+                  <%= link_to dose_path(dose), method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                </p>
+              <% end %>
+            </div>
+
+            <div class="review-list">
+              <div class="review-title">
+                <span>Reviews</span>
+              </div>
+              <% @reviews.each do |review| %>
+                <% num = review.rating %>
+                <% anum = 5 - review.rating %>
+
+                <% num.times do %>
+                <i class="fas fa-star" style="color: #f9d949"></i>
+                <% end %>
+                <% anum.times do %>
+                <i class="far fa-star" style="color: #f9d949"></i>
+                <% end %>
+                <p>"<%= review.content %>"</p>
+
+              <% end %>
+            </div>
+
+          </div>
+
+          <div class="col-sm-6">
+
+            <div class="dose-title-small">
+              <span>Feel free to add a new ingredient:</span>
+            </div>
+
+            <div class="dose-form">
+              <%= render "doses/form", cocktail: @cocktail, dose: @dose %>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="rewies review-box">
+      <div class="review-title">
+        <span>Review this Cocktail</span>
       </div>
-      <div class="text-center">
+      <%= render "reviews/form", cocktail: @cocktail, review: @review %>
+    </div>
+
+    <div class="text-center">
       <p><%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-primary" %></p>
-      </div>
+    </div>
 
     </div>
   </div>

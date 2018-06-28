@@ -15,8 +15,10 @@
             <div class="cocktail">
 
               <div class="cocktail-hover">
-                <i class="fas fa-glass-martini"></i>
-                <p>View Ingredients </p>
+                <%= link_to cocktail_path(cocktail) do %>
+                  <i class="fas fa-glass-martini"></i>
+                  <p>View Ingredients </p>
+                <% end %>
               </div>
 
               <div class="cocktail-details">
