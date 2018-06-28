@@ -2,6 +2,13 @@
   <div class="banner-content">
     <h1>Cocktailr.</h1>
     <p>Professionally Tailored Cocktails</p>
-    <%= link_to "Add Your Cocktail", new_cocktail_path, class: "btn btn-primary btn-landing" %>
+
+    <div class="searchbar">
+      <%= form_tag(cocktails_path method: :get) do %>
+        <%= text_field_tag :term, params[:term] %>
+        <%= submit_tag 'Search', name: nil, class: "btn btn-primary btn-landing" %>
+      <% end %>
+    </div>
+
   </div>
 </div>

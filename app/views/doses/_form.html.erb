@@ -1,8 +1,8 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.input :ingredient, collection: @ingredients %>
+  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
 
-<!--   <select class="select2">
+<!-- <select class="select2">
     <%= select_tag "ingredient", options_from_collection_for_select(
       Ingredient.all,
       :name, :name),

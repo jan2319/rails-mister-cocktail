@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-sm-6">
 
-            <div class="dose-title">
+            <div class="dose-title courgette">
               <span>Ingredients</span>
             </div>
 
@@ -24,26 +24,6 @@
                 </p>
               <% end %>
             </div>
-
-            <div class="review-list">
-              <div class="review-title">
-                <span>Reviews</span>
-              </div>
-              <% @reviews.each do |review| %>
-                <% num = review.rating %>
-                <% anum = 5 - review.rating %>
-
-                <% num.times do %>
-                <i class="fas fa-star" style="color: #f9d949"></i>
-                <% end %>
-                <% anum.times do %>
-                <i class="far fa-star" style="color: #f9d949"></i>
-                <% end %>
-                <p>"<%= review.content %>"</p>
-
-              <% end %>
-            </div>
-
           </div>
 
           <div class="col-sm-6">
@@ -61,6 +41,34 @@
     </div>
 
     <div class="rewies review-box">
+
+      <div class="review-list">
+        <div class="review-title courgette">
+          <span>Reviews</span>
+        </div>
+          <% if @reviews.empty? %>
+            <p>No reviews yet.</p>
+          <% else %>
+            <div class="row">
+            <% @reviews.each do |review| %>
+            <% num = review.rating %>
+            <% anum = 5 - review.rating %>
+              <div class="col-sm-3">
+                <% num.times do %>
+                <i class="fas fa-star" style="color: #f9d949"></i>
+                <% end %>
+                <% anum.times do %>
+                <i class="far fa-star" style="color: #f9d949"></i>
+                <% end %>
+                <p>"<%= review.content.truncate(30) %>"</p>
+                </div>
+                <% end %>
+            </div>
+          <% end %>
+      </div>
+
+      <hr class="divider">
+
       <div class="review-title">
         <span>Review this Cocktail</span>
       </div>

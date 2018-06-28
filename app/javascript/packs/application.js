@@ -8,3 +8,8 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import '../components/select2';
+
+import 'bootstrap';
+import improveDropdown from '../components/select';
+
+improveDropdown();
