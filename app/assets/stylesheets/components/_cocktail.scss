@@ -1,0 +1,52 @@
+.cocktail-info {
+  background: white;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  box-shadow: 4px 4px 0px $lightred;
+}
+
+.cocktail-title {
+  font-size: 24px;
+}
+
+.cocktail {
+  background: white;
+  height: 180px;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  box-shadow: 4px 4px 0px $lightred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.2s;
+}
+
+.divider {
+  margin-right: 80px;
+}
+
+.cocktail-hover {
+  background-color: rgba(255,255,255, 1);
+  position: absolute;
+  width: calc(100% - 40px);
+  padding: 10px;
+  opacity: 0;
+  transition: .3s;
+  color: $turquoise;
+  cursor: pointer;
+}
+
+.cocktail-hover i {
+  font-size: 40px;
+  color: $lightred;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cocktail:hover .cocktail-hover {
+  opacity: 1;
+}

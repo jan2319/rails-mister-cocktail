@@ -1,0 +1,12 @@
+    <div class="navbar-cocktail">
+      <div class="logo-box">
+        <%= image_tag("icon.png", class: "menu_icon") %>
+        <div>
+          <h3><%= link_to "Cocktailr.", cocktails_path, class: "logo-link" %></h3>
+        </div>
+
+      </div>
+      <div>
+        <%= link_to "Add Your Cocktail", new_cocktail_path, class: "btn btn-primary" %>
+      </div>
+    </div>
