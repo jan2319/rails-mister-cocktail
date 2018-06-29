@@ -1,7 +1,7 @@
 <%= simple_form_for(@cocktail) do |f| %>
   <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.text_field :name, class: 'form-control', error: 'try again punk' %>
     <br>
     <%= f.input :photo%>
     <%= f.input :photo_cache, as: :hidden %>

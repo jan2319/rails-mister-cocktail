@@ -21,6 +21,13 @@ ing_list["drinks"].each do |ing|
   Ingredient.create(name: ing_name)
 end
 
+puts 'Creating cocktails...'
+
+new_cocktails = %w(Munich Mule, Gin Fizz, Cuba Libre, Harvey Wallbanger, Vodka Orange, Flying Hirsch)
+
+new_cocktails.each_with_index do |cocktail, index|
+  Cocktail.create(name: cocktail[index])
+end
 
 puts 'Finished!'
 

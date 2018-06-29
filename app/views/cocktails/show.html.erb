@@ -11,7 +11,6 @@
           <div class="col-sm-6">
             <% if @cocktail.photo.url.nil? %>
               <%= image_tag("placeholder.png", class: "cocktail-img") %>
-
             <% else %>
             <%= cl_image_tag @cocktail.photo, class: "cocktail-img",  crop: :fill %>
             <% end %>

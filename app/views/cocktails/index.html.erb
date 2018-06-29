@@ -14,14 +14,21 @@
 
           <% @cocktails.each do |cocktail| %>
           <div class="col-sm-6 col-md-4">
-            <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('<%= cl_image_path 'e9jtjmdeha8ggojnnnvj', crop: :fill %>')">
 
-              <div class="cocktail-hover">
-                <%= link_to cocktail_path(cocktail) do %>
+            <% if cocktail.photo.url.nil? %>
+            <% @imgpath =  'placeholder-sm' %>
+            <% else %>
+            <% @imgpath = cocktail.photo %>
+            <% end %>
+
+            <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.6)), url('<%= cl_image_path @imgpath, crop: :fill %>')">
+
+            <div class="cocktail-hover">
+              <%= link_to cocktail_path(cocktail), class: "hover-link" do %>
                   <i class="fas fa-glass-martini"></i>
-                  <p>View Ingredients </p>
-                <% end %>
-              </div>
+                  <p>View Ingredients</p>
+              <% end %>
+            </div>
 
               <h2><%= cocktail.name %></h2>
             </div>

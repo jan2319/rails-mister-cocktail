@@ -25,6 +25,7 @@
 .cocktail h2 {
   color: white !important;
   opacity: 0.9;
+  text-shadow: 1px 1px 10px black;
 }
 
 .divider {
@@ -43,7 +44,6 @@
   opacity: 0;
   transition: 0.5s;
   color: $turquoise;
-  cursor: pointer;
 }
 
 .cocktail-hover i {
@@ -51,15 +51,16 @@
   color: $lightred;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-decoration: none;
 }
 
-.cocktail:hover {
+.hover-link p {
+  text-decoration: none;
   cursor: pointer;
 }
 
 .cocktail:hover .cocktail-hover {
-  opacity: 0.95;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .cocktail:hover h2 {
@@ -71,3 +72,4 @@
   padding-right: 30px;
   padding-left: 30px;
 }
+
