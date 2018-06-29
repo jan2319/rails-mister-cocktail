@@ -6,9 +6,16 @@
       <h1><%= @cocktail.name %></h1>
       <hr class="divider">
 
-      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
         <div class="row">
+          <div class="col-sm-6">
+            <% if @cocktail.photo.url.nil? %>
+              <%= image_tag("placeholder.png", class: "cocktail-img") %>
+
+            <% else %>
+            <%= cl_image_tag @cocktail.photo, class: "cocktail-img",  crop: :fill %>
+            <% end %>
+          </div>
           <div class="col-sm-6">
 
             <div class="dose-title courgette">
@@ -26,9 +33,8 @@
                 </p>
               <% end %>
             </div>
-          </div>
 
-          <div class="col-sm-6">
+              <hr class="divider">
 
             <div class="dose-title-small">
               <span>Feel free to add a new ingredient:</span>

@@ -9,15 +9,22 @@
 }
 
 .cocktail {
-  background: white;
+  background-size: cover;
+  color: white;
   height: 180px;
   padding: 20px;
   margin-bottom: 40px;
   box-shadow: 4px 4px 0px $lightred;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all ease 0.2s;
+}
+
+.cocktail h2 {
+  color: white !important;
+  opacity: 0.9;
 }
 
 .divider {
@@ -27,10 +34,14 @@
 .cocktail-hover {
   background-color: rgba(255,255,255, 1);
   position: absolute;
-  width: calc(100% - 40px);
-  padding: 10px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 30px;
   opacity: 0;
-  transition: .3s;
+  transition: 0.5s;
   color: $turquoise;
   cursor: pointer;
 }
@@ -38,10 +49,25 @@
 .cocktail-hover i {
   font-size: 40px;
   color: $lightred;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.cocktail:hover {
+  cursor: pointer;
 }
 
 .cocktail:hover .cocktail-hover {
-  opacity: 1;
+  opacity: 0.95;
+}
+
+.cocktail:hover h2 {
+  opacity: 0;
+}
+
+.cocktail-img {
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
 }

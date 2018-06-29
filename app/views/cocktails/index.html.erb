@@ -9,15 +9,12 @@
       <p><strong><%= @cocktails.size %></strong> search result for <strong><%= @term %></strong></p>
       <% end %>
 
-      <%= cl_image_tag("dkp7jzp3hbnsixdegyfb",
-      width: 400, height: 300, crop: :fill) %>
-
       <div class="row">
 
 
           <% @cocktails.each do |cocktail| %>
           <div class="col-sm-6 col-md-4">
-            <div class="cocktail">
+            <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('<%= cl_image_path 'e9jtjmdeha8ggojnnnvj', crop: :fill %>')">
 
               <div class="cocktail-hover">
                 <%= link_to cocktail_path(cocktail) do %>
@@ -26,9 +23,7 @@
                 <% end %>
               </div>
 
-              <div class="cocktail-details">
-                <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-              </div>
+              <h2><%= cocktail.name %></h2>
             </div>
           </div>
           <% end %>
