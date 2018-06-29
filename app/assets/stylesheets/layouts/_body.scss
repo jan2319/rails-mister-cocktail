@@ -1,7 +1,10 @@
 body {
   background: $beige;
+  background-image: linear-gradient(to bottom, rgba(237,230,217,0.68) 0%,rgba(237,230,217,0.68) 100%), url(/assets/roughcloth.png);
+  color: #414e52;
 }
 
 .index-title {
   margin-top: 50px;
+  margin-bottom: 30px;
 }

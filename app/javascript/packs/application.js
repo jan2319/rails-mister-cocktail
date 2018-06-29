@@ -10,6 +10,9 @@
 import '../components/select2';
 
 import 'bootstrap';
-import improveDropdown from '../components/select';
+import improveDropdown from '../components/select2';
 
 improveDropdown();
+
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();

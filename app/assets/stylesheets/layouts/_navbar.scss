@@ -1,6 +1,6 @@
 .navbar-cocktail {
-  box-shadow: 0 3px 0px $turquoise;
-  background: $beige;
+  box-shadow: 0 2px 0px $turquoise;
+  background: $lightred;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -12,19 +12,29 @@
   z-index: 100;
 }
 
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-search {
+  padding-right: 10px;
+}
+
 .logo-link {
-  color: $darkred;
+  color: white;
   opacity: 1;
   &:hover {
   text-decoration: none;
   opacity: 0.8;
-  color: $red;
+  color: white;
   }
 }
 
 .menu_icon {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .logo-box {
@@ -34,5 +44,7 @@
 }
 
 .logo-box h3 {
-  padding-left: 10px;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }

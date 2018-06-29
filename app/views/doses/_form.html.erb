@@ -2,13 +2,5 @@
   <%= f.input :description %>
   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
 
-<!-- <select class="select2">
-    <%= select_tag "ingredient", options_from_collection_for_select(
-      Ingredient.all,
-      :name, :name),
-      class: 'select2' %>
-  </select> -->
-
-
-  <%= f.submit "Add Ingredient", class: "btn btn-danger" %>
+  <%= f.submit "Add Ingredient", class: "btn btn-primary" %>
 <% end %>

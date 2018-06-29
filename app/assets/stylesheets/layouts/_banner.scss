@@ -1,7 +1,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: 95vh;
+  height: calc(100vh - 60px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -21,15 +21,20 @@
   margin-bottom: 30px;
 }
 
-.btn-landing {
+.btn-search {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: all 0.5s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.searchbar {
+  min-width: 500px;
+  position: relative;
 }
 
 

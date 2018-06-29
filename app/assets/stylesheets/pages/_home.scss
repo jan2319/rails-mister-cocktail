@@ -2,10 +2,25 @@
 .btn-secondary {
   background: transparent;
   color: #A8C3BB;
-  margin-top: 50px;
   &:hover{
     opacity: 0.85;
     background: transparent;
     color: #A8C3BB;
   }
+}
+
+.btn-white {
+  background: transparent;
+  color: white;
+  border-color: white;
+  &:hover {
+    opacity: 0.75;
+    background: transparent;
+    color: white;
+    border-color: white;
+  }
+}
+
+.margintop {
+  margin-top: 50px;
 }

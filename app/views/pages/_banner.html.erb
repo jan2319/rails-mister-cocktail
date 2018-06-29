@@ -1,15 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(58,0,0,0.5) 0%, rgba(58,0,0,0.7) 50%), url('http://royalcottagenp.com/wp-content/uploads/2018/02/s5.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(38,4,1,0.5) 0%, rgba(38,4,1,0.7) 50%), url('http://royalcottagenp.com/wp-content/uploads/2018/02/s5.jpg');">
   <div class="banner-content">
     <h1>Cocktailr.</h1>
-    <p>Professionally Tailored Cocktails</p>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
 
     <div class="searchbar">
-      <%= form_tag(cocktails_path method: :get) do %>
-        <%= text_field_tag :term, params[:term] %>
-        <%= submit_tag 'Search', name: nil, class: "btn btn-primary btn-landing" %>
+      <%= form_tag(cocktails_path, method: :get) do %>
+        <%= text_field_tag :term, params[:term], class: "form-control input-lg", placeholder: "Search for cocktail..." %>
+        <%= submit_tag 'Search', name: nil, class: "btn btn-primary btn-search", method: :get %>
       <% end %>
     </div>
-    <span><%= link_to "See all Cocktails", cocktails_path, class: "btn btn-primary btn-secondary" %></span>
+    <span><%= link_to "See all Cocktails", cocktails_path, class: "btn btn-primary btn-secondary margintop" %></span>
 
   </div>
 </div>
