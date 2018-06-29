@@ -18,7 +18,11 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'carrierwave', '~> 1.2'
+
 gem 'figaro'
+
+gem 'cloudinary'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'

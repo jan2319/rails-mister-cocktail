@@ -6,6 +6,8 @@
       <h1><%= @cocktail.name %></h1>
       <hr class="divider">
 
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
         <div class="row">
           <div class="col-sm-6">
 
