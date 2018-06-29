@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.btn-secondary {
+  background: transparent;
+  color: #A8C3BB;
+  margin-top: 50px;
+  &:hover{
+    opacity: 0.85;
+    background: transparent;
+    color: #A8C3BB;
+  }
+}
