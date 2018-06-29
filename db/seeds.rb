@@ -9,8 +9,10 @@
 require 'json'
 require 'open-uri'
 
+
 puts 'Cleaning database...'
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts 'Creating ingredients...'
 
@@ -23,11 +25,15 @@ end
 
 puts 'Creating cocktails...'
 
-new_cocktails = %w(Munich Mule, Gin Fizz, Cuba Libre, Harvey Wallbanger, Vodka Orange, Flying Hirsch)
+new_cocktails = ["Munich Mule", "Gin Fizz", "Cuba Libre", "Harvey Wallbanger", "Vodka Orange", "Flying Hirsch"]
 
-new_cocktails.each_with_index do |cocktail, index|
-  Cocktail.create(name: cocktail[index])
-end
+Cocktail.create(name: new_cocktails[0])
+Cocktail.create(name: new_cocktails[1])
+Cocktail.create(name: new_cocktails[2])
+Cocktail.create(name: new_cocktails[3])
+Cocktail.create(name: new_cocktails[4])
+Cocktail.create(name: new_cocktails[5])
+
 
 puts 'Finished!'
 
